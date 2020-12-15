@@ -1,0 +1,74 @@
+ext {
+    kotlin_version = "1.4.10"
+    core_ktx_version = '1.3.2'
+    coroutines_android_version = '1.3.9'
+    kotlinx_serialization_json_version = '1.0.0'
+    androidx_benchmark_version = '1.0.0'
+    dokkaVersion = '0.9.17'
+    jacoco_version = '0.8.5'
+
+    classpathDependencies = [
+            classpath_android_gradle: "com.android.tools.build:gradle:4.1.0",
+            classpath_kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
+            classpath_dokka: "org.jetbrains.dokka:dokka-android-gradle-plugin:$dokkaVersion",
+            classpath_jacoco: "org.jacoco:org.jacoco.core:$jacoco_version"
+    ]
+
+    kotlinDependencies = [
+            stdlib_jdk: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            core_ktx: "androidx.core:core-ktx:$core_ktx_version",
+
+            // Coroutines
+            kotlinx_coroutines_core: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version",
+            kotlinx_coroutines_android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version",
+
+            kotlinx_serialization_json: "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinx_serialization_json_version",
+    ]
+
+    androidx_annotation_version = '1.1.0'
+    androidXDependencies = [
+            annotation: "androidx.annotation:annotation:$androidx_annotation_version"
+    ]
+
+    timber_version = '4.7.0'
+    zalocore_version = '1.2.2'
+    javapoet_version = '1.13.0'
+    common_lang3_version = '3.0'
+    commonDependencies = [
+            timber: "com.jakewharton.timber:timber:$timber_version",
+            zalocore: "com.zing.zalo:zalocore:$zalocore_version",
+            javapoet: "com.squareup:javapoet:$javapoet_version",
+            apache_common_lang3: "org.apache.commons:commons-lang3:$common_lang3_version",
+    ]
+
+    robolectric_version = '3.8'
+    junit_version = '4.12'
+    mockito_version = '3.5.2'
+    mockito_kotlin_version = '2.2.0'
+    json_version = '20180130'
+    truth_version = '1.0'
+    androidx_junit_version = '1.1.2'
+    test_runner_version = '1.1.0'
+    test_rules_version = '1.1.0'
+    kotlin_compile_testing_version = "1.3.1"
+    testDependencies = [
+            robolectric: "org.robolectric:robolectric:$robolectric_version",
+            junit: "junit:junit:$junit_version",
+            mockito_core: "org.mockito:mockito-core:$mockito_version",
+            mockito_inline: "org.mockito:mockito-inline:$mockito_version",
+            mockito_kotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version",
+            json: "org.json:json:$json_version",
+            truth: "com.google.truth:truth:$truth_version",
+            androidx_junit: "androidx.test.ext:junit:$androidx_junit_version",
+            androidx_benchmark: "androidx.benchmark:benchmark-junit4:$androidx_benchmark_version",
+            mockito_android: "org.mockito:mockito-android:$mockito_version",
+            runner: "androidx.test:runner:$test_runner_version",
+            rules: "androidx.test:rules:$test_rules_version",
+            kotlin_compile_testing:  "com.github.tschuchortdev:kotlin-compile-testing:$kotlin_compile_testing_version",
+    ]
+
+    auto_service_version = '1.0-rc7'
+    auto = [
+            auto_service: "com.google.auto.service:auto-service:$auto_service_version"
+    ]
+}
